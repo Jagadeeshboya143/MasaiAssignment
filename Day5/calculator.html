@@ -1,0 +1,79 @@
+<html>
+    <style>
+        .calculator {
+            width: 200px;
+            margin: 0 auto;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        .buttons {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-gap: 5px;
+            margin-top: 10px;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            background-color: #f2f2f2;
+            cursor: pointer;
+        }
+
+        #result {
+            width: 100%;
+            padding: 5px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            text-align: right;
+        }
+
+        .symbol-button {
+            background-color: black;
+            color: white;
+        }
+
+        .clear-button {
+            background-color: red;
+            color: white;
+        }
+    </style>
+    <!DOCTYPE html>
+    <html>
+    <head>
+      <title>Simple Calculator</title>
+      <link rel="stylesheet" type="text/css" href="calculator.css">
+      <h1 style="color: rgb(15, 136, 116); text-align: center;">Masai Calculator</h1>
+    </head>
+    <body>
+      <div class="calculator">
+        <input type="text" id="result" readonly>
+        <div class="buttons">
+          <button onclick="appendToResult('7');">1</button>
+          <button onclick="appendToResult('8')">2</button>
+          <button onclick="appendToResult('9')">3</button>
+          <button onclick="appendToResult('+')" class="symbol-button">+</button>
+          <button onclick="appendToResult('4')">4</button>
+          <button onclick="appendToResult('5')">5</button>
+          <button onclick="appendToResult('6')">6</button>
+          <button onclick="appendToResult('-')" class="symbol-button">-</button>
+          <button onclick="appendToResult('1')">7</button>
+          <button onclick="appendToResult('2')">8</button>
+          <button onclick="appendToResult('3')">9</button>
+          <button onclick="appendToResult('*')" class="symbol-button">*</button>
+          <button onclick="clearResult()" class="clear-button">C</button>
+          <button onclick="appendToResult('0')">0</button>
+          <button onclick="appendToResult('/')">=</button>
+          <button onclick="calculateResult()" class="symbol-button">/</button>
+        </div>
+      </div>
+    
+      <script src="calculator.js"></script>
+    </body>
+    </html>
+</html>
